@@ -220,6 +220,7 @@ gulp.task('replace', function() {
 gulp.task('move', function() {
 	return gulp.src([
 		srcRoot 		+ '*.*',
+	    srcRoot			+ 'assets/pdf/*',
 		srcCSS 			+ '*.css',
 		srcFonts 		+ '**/*',
 		srcImg 			+ '**/*',
@@ -228,6 +229,7 @@ gulp.task('move', function() {
 	    '!' + srcRoot 	+ 'gulpfile.js',
 	    '!' + srcRoot 	+ 'package.json',
 	    '!' + srcRoot 	+ 'README.md',
+	    '!' + srcRoot 	+ 'npm-debug.log',
 	    '!' + srcJS 	+ 'vendors/',
 	    '!' + srcJS 	+ 'vendors/**/*',
 	    '!' + srcJS 	+ 'scripts.js'
