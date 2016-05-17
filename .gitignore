@@ -4,10 +4,7 @@
 .vagrant
 _copy
 _designs
-icons.eot
-icons.ttf
-icons.svg
-icons.woff
+icons
 importbuddy.php
 public
 Search-Replace-DB
