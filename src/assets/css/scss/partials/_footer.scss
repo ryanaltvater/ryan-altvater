@@ -1,5 +1,39 @@
 .footer {
+	&__social {
+		.icon {
+			@include font-size(24px);
+		}
+	}
+
 	p {
 		margin-bottom: 0;
+	}
+
+	a {
+		color: $white;
+	}
+
+	ul {
+		padding-left: 0;
+		margin-bottom: 10px;
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0 10px;
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	hr {
+		margin: 0 0 20px;
+		background-color: #454c56;
 	}
 }

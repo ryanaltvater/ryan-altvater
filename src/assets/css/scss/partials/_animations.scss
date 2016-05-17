@@ -1,0 +1,26 @@
+@keyframes scroll {
+	0% {
+		top: 11px;
+		opacity: 0;
+	}
+
+	15% {
+		top: 11px;
+		opacity: 1;
+	}
+
+	30% {
+		top: 11px;
+		opacity: 1;
+	}
+
+	45% {
+		top: 34px;
+		opacity: 1;
+	}
+
+	100% {
+		top: 34px;
+		opacity: 0;
+	}
+}

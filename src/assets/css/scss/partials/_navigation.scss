@@ -1,23 +1,55 @@
+.nav__toggle {
+	@include transform(scale(-1,1));
+
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 20px 0 0 20px;
+	cursor: pointer;
+
+	&:hover {
+		.nav__toggle-bar {
+			width: 44px;
+		}
+	}
+
+	&-bar {
+		@include transition(all 0.25s);
+
+		height: 3px;
+		margin-bottom: 6px;
+		background-color: $white;
+
+		&:first-of-type {
+			width: 24px;
+		}
+
+		&:last-of-type {
+			width: 34px;
+		}
+
+		&:nth-child(2) {
+			width: 44px;
+		}
+	}
+}
+
 .nav {
 	ul {
+		@include align-center;
+
 		padding-left: 0;
 		margin-bottom: 0;
 		list-style: none;
 	}
 
 	li {
-		display: inline-block;
-		float: left;
-		padding: 0 20px;
-		margin-bottom: 0;
+		margin-bottom: 20px;
+	}
 
-		&:first-of-type {
-			padding-left: 0;
-		}
+	a {
+		@include font-size(30px);
 
-		&:last-of-type {
-			float: none;
-			padding-right: 0;
-		}
+		color: $white;
 	}
 }

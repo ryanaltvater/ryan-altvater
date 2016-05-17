@@ -1,0 +1,73 @@
+.button {
+	@include secondary-font;
+	@include font-size(18px);
+	@include transition(all 0.25s);
+	@include media($small) {
+		width: 100%;
+	}
+	@include media($medium) {
+	    width: 240px;
+	}
+
+	display: inline-block;
+	padding: 19px 20px 20px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: transparent;
+
+	&:hover {
+		@include media($medium) {
+		    width: 280px;
+		}
+	}
+
+	&__primary {
+		color: $green;
+		border: 3px solid $green;
+
+		&:hover {
+			color: $white;
+			background-color: $green;
+		}
+	}
+}
+
+.hero {
+	&__scroll {
+		@include transition(all 0.25s);
+		@include align-center;
+
+		top: auto;
+		bottom: 40px;
+		display: inline-block;
+		width: auto;
+		height: 54px;
+		margin: 0 auto;
+		text-align: center;
+		background-color: transparent;
+		border: none;
+		-webkit-transform: translate(-50%,0);
+		        transform: translate(-50%,0);
+
+		&-mouse {
+			position: relative;
+			display: inline-block;
+			width: 34px;
+			height: 54px;
+			margin: 0 auto;
+			border: 3px solid $white;
+			border-radius: 20px;
+		}
+
+		&-wheel {
+			position: absolute;
+			top: 11px;
+			left: 12px;
+			width: 4px;
+			height: 4px;
+			background-color: $white;
+			border-radius: 50%;
+			animation: scroll 2.5s infinite;
+		}
+	}
+}

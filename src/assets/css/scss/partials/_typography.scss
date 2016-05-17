@@ -1,9 +1,21 @@
 @font-face {
+	src: url("../fonts/new-shine-script/new-shine-script.eot");
+	src: url("../fonts/new-shine-script/new-shine-script.eot#iefix") format("embedded-opentype"),
+	url("../fonts/new-shine-script/new-shine-script.svg#NewShineScript") format("svg"),
+	url("../fonts/new-shine-script/new-shine-script.woff2") format("woff2"),
+	url("../fonts/new-shine-script/new-shine-script.woff") format("woff"),
+	url("../fonts/new-shine-script/new-shine-script.ttf") format("truetype");
+	font-family: "New Shine Script";
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	src: url("../fonts/icons/icons.eot");
 	src: url("../fonts/icons/icons.eot#iefix") format("embedded-opentype"),
-		 url("../fonts/icons/icons.svg#Icons") format("svg"),
-		 url("../fonts/icons/icons.woff") format("woff"),
-		 url("../fonts/icons/icons.ttf") format("truetype");
+	url("../fonts/icons/icons.svg#Icons") format("svg"),
+	url("../fonts/icons/icons.woff") format("woff"),
+	url("../fonts/icons/icons.ttf") format("truetype");
 	font-family: "Icons";
 	font-weight: normal;
 	font-style: normal;
@@ -66,6 +78,42 @@
 			content: "\E007";
 		}
 	}
+
+	&__codepen {
+		&:before {
+			content: "\E008";
+		}
+	}
+
+	&__github {
+		&:before {
+			content: "\E009";
+		}
+	}
+
+	&__instagram {
+		&:before {
+			content: "\E00A";
+		}
+	}
+
+	&__logo {
+		&:before {
+			content: "\E00B";
+		}
+	}
+
+	&__link {
+		&:before {
+			content: "\E00C";
+		}
+	}
+
+	&__dribbble {
+		&:before {
+			content: "\E00D";
+		}
+	}
 }
 
 * {
@@ -80,7 +128,18 @@ html {
 
 body {
 	@include primary-font;
-	@include font-size(14px);
+	@include font-size(24px);
+
+	color: $gray;
+}
+
+nav {
+	@include secondary-font;
+}
+
+footer {
+	color: $gray;
+	text-align: center;
 }
 
 h1,
@@ -89,18 +148,35 @@ h3,
 h4,
 h5,
 h6 {
-	@include secondary-font;
-
 	margin-bottom: 10px;
+	color: $green;
+	letter-spacing: 1px;
+}
+
+h1 {
+	@include tertiary-font;
+	@include font-size(48px);
+
+	margin-top: 0;
+}
+
+h2 {
+	@include secondary-font;
+	@include font-size(24px);
 }
 
 p,
 ul {
-	line-height: 1.4;
+	line-height: 1.6;
 }
 
 p {
 	margin-bottom: 20px;
+
+	a {
+		color: $darkGray;
+		border-bottom: 1px dotted $darkGray;
+	}
 }
 
 a,
@@ -112,4 +188,97 @@ a:visited {
 
 sup {
 	top: -5px;
+}
+
+section {
+	text-align: center;
+}
+
+// nav {
+// 	text-align: center;
+// }
+
+.header,
+.hero {
+	.icon__logo {
+		@include transition(all 0.25s);
+	}
+}
+
+.header {
+	.icon__logo {
+		font-size: 72px;
+		color: $green;
+	}
+}
+
+.hero,
+.footer {
+	.icon__logo {
+		color: $white;
+	}
+}
+
+.hero {
+	&__content {
+		h1 {
+			@include secondary-font;
+			@include media($large) {
+				@include font-size(144px);
+			}
+
+			line-height: 0.8;
+			color: $white;
+
+			@media (max-width: 1023px) {
+				font-size: 14vw;
+			}
+		}
+	}
+
+	&__location {
+		span {
+			@include font-size(18px);
+
+			text-transform: uppercase;
+		}
+	}
+
+	.icon__logo {
+		@include media($medium) {
+			@include font-size(144px);
+		}
+
+		@media (max-width: 767px) {
+			@include font-size(72px);
+		}
+	}
+}
+
+.grid {
+	.item__hover {
+		h2 {
+			@include media($small) {
+				@include font-size(18px);
+			}
+
+			line-height: 1;
+			color: $white;
+			text-align: center;
+		}
+
+		.icon {
+			@include font-size(24px);
+
+			color: $white;
+		}
+	}
+}
+
+.footer {
+	@include font-size(18px);
+
+	.icon__logo {
+		font-size: 72px;
+	}
 }
