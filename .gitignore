@@ -7,8 +7,10 @@ _designs
 icons.eot
 icons.ttf
 icons.svg
-src/assets/fonts/icons/icons.woff
+icons.woff
+importbuddy.php
 public
+Search-Replace-DB
 
 
 ## Node.js
