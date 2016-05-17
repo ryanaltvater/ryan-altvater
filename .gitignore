@@ -4,10 +4,11 @@
 .vagrant
 _copy
 _designs
+icons.eot
+icons.ttf
+icons.svg
+src/assets/fonts/icons/icons.woff
 public
-READMD.md
-secrets.json
-wp-config.php
 
 
 ## Node.js
