@@ -1,9 +1,6 @@
 {
-  "name": "Project Name",
-  "authors": [
-    "Ryan Altvater <www.ryanaltvater.com>"
-  ],
-  "license": "MIT",
+  "name": "ryan-altvater",
+  "version": "0.0.0",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -18,9 +15,9 @@
   },
   "install": {
     "path": {
-      "css": "assets/css/scss/bower",
-      "scss": "assets/css/scss/bower",
-      "js": "assets/js"
+      "css": "src/assets/css/scss/bower",
+      "scss": "src/assets/css/scss/bower",
+      "js": "src/assets/js"
     },
     "sources": {
       "jquery": "bower_components/jquery/jquery.min.js",
@@ -33,5 +30,6 @@
         ]
       }
     }
-  }
+  },
+  "license": "MIT"
 }

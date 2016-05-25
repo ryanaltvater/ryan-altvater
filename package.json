@@ -1,13 +1,18 @@
 {
-  "name": "Project-Name",
-  "description": "The project description goes here.",
-  "author": "Ryan Altvater",
-  "url": "www.ryanaltvater.com",
+  "name": "Ryan-Altvater",
+  "version": "0.0.0",
+  "description": "A static project created by Liquid, a Yeoman generator.",
+  "homepage": "https://github.com/ryanaltvater/generator-liquid",
+  "issues": "https://github.com/ryanaltvater/generator-liquid/issues",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:ryanaltvater/generator-liquid.git"
   },
-  "license": "MIT",
+  "author": {
+    "name": "Ryan Altvater",
+    "email": "ryan@ryanaltvater.com",
+    "url": "http://ryanaltvater.com"
+  },
   "devDependencies": {
     "bower": "^1.6.5",
     "bower-installer": "^1.2.0",
@@ -30,5 +35,6 @@
   },
   "scripts": {
     "postinstall": "node_modules/.bin/bower-installer"
-  }
+  },
+  "license": "MIT"
 }
