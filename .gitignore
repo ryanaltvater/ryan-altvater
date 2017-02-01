@@ -1,13 +1,15 @@
 ## Custom
 
 *.sublime-*
+.jekyll-metadata
 .vagrant
-_copy
-_design
-_old
-icons
+_copy/
+_design/
+_old/
+_site/
+icons/
 importbuddy.php
-public
+public/
 Search-Replace-DB
 
 
@@ -17,18 +19,18 @@ Search-Replace-DB
 *.pid
 *.seed
 .lock-wscript
-build/Release
-coverage
-lib-cov
-logs
-node_modules
-pids
+build/Release/
+coverage/
+lib-cov/
+logs/
+node_modules/
+pids/
 
 
 ## Bower
 
-bower
-bower_components
+bower/
+bower_components/
 
 
 ## CSS/SCSS
@@ -48,9 +50,9 @@ bower_components
 .LSOverride
 .Spotlight-V100
 .Trashes
-Icon
-Network Trash Folder
-Temporary Items
+Icon/
+Network Trash Folder/
+Temporary Items/
 
 
 ## Windows
