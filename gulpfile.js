@@ -65,10 +65,10 @@ var banner = [
 
 
 /* ============================== */
-/*  File Include
+/*  HTML
 /* ============================== */
 
-gulp.task('fileinclude', function() {
+gulp.task('html', function() {
 	return gulp.src([
 		srcRoot + '**/*.html',
 		'!' + srcRoot + 'templates/**/*'
@@ -77,18 +77,10 @@ gulp.task('fileinclude', function() {
 		prefix: '@@',
 		basepath: '@file'
 	}))
-	.pipe(gulp.dest(destRoot));
-});
-
-
-/* ============================== */
-/*  HTML
-/* ============================== */
-
-gulp.task('html', function() {
-	return runSequence([
-		'fileinclude'
-	], reload);
+	.pipe(gulp.dest(destRoot))
+	.pipe(reload({
+		stream: true
+	}));
 });
 
 
